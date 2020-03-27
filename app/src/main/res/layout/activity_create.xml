@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemCreate">
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="10dp"
+            android:id="@+id/edit_name"
+            android:textSize="24dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="事项" />
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:hint="日期"
+            android:inputType="none"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/date_input"/>
+        <DatePicker
+            android:id="@+id/date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/edit_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="10dp"
+            android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/edit_name"
+        app:layout_constraintTop_toTopOf="@id/edit_name"
+        android:text="添加"
+        android:id="@+id/btn_create"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

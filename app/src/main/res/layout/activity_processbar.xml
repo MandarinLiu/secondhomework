@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/process"
+        >
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progress="50"
+            android:id="@+id/editprocess"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/lay"
+        >
+        <EditText
+            android:id="@+id/process_finishstaus"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:hint="输入完成度"
+            android:gravity="center"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:text="完成"
+            android:background="@color/colorButton"
+            android:id="@+id/processbtn_finish"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
