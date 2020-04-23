@@ -20,12 +20,21 @@
         <EditText
             android:layout_width="320dp"
             android:layout_height="50dp"
-            android:hint="日期"
+            android:hint="起始日期"
             android:inputType="none"
             android:layout_margin="10dp"
             app:layout_constraintTop_toBottomOf="@+id/edit_name"
             app:layout_constraintLeft_toLeftOf="parent"
             android:id="@+id/date_input"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:hint="截止日期"
+        android:inputType="none"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/date_input"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/date_end"/>
         <DatePicker
             android:id="@+id/date_picker"
             android:layout_width="wrap_content"
@@ -34,7 +43,14 @@
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_margin="10dp"
             android:visibility="invisible"/>
-
+        <DatePicker
+        android:id="@+id/date_picker_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/date_end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        android:visibility="invisible"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,6 +58,15 @@
         app:layout_constraintTop_toTopOf="@id/edit_name"
         android:text="添加"
         android:id="@+id/btn_create"/>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/date_end"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@mipmap/add"
+        />
 
 
 
