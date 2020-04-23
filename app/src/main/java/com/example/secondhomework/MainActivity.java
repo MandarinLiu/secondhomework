@@ -85,6 +85,17 @@ public class MainActivity extends Activity {
                 byte[] image=cursor.getBlob(cursor.getColumnIndex("image"));
                 Item items=new Item(item,date,date_end,progress,image);
                 mitemList.add(items);
+                //排序
+                Collections.sort(mitemList, new Comparator<Object>() {
+                    public int compare(Object arg0, Object arg1) {
+                        Item item0 = (Item) arg0;
+                        Item item1 = (Item) arg1;
+                       // SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+                        int flag = item0.getItem_date().compareTo(item1.getItem_date());
+                        return flag;
+                    }
+                });
+                ItemAdapter.notifyDataSetChanged();
             }while (cursor.moveToNext());
         }
         ItemAdapter.notifyDataSetChanged();
@@ -106,13 +117,13 @@ public class MainActivity extends Activity {
                     public int compare(Object arg0, Object arg1) {
                         Item item0 = (Item) arg0;
                         Item item1 = (Item) arg1;
-                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+
                         int flag = item0.getItem_date().compareTo(item1.getItem_date());
                         return flag;
                     }
                 });
                 ItemAdapter.notifyDataSetChanged();
-                // SharedPreferences sharedPreferences=MainActivity.this.getSharedPreferences("main_activity",Context.MODE_PRIVATE);
+
             }
         }
         else if (requestCode == 3 && resultCode ==4) {
